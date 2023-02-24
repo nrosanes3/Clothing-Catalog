@@ -1,0 +1,720 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    margin: 0;
+    background-color: #ecfbfc;
+    color: #293241;
+}
+
+/****************** Header ******************/
+
+header {
+    background-color: #554dee;
+}
+
+header .inner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.hamburger {
+    width: 5rem;
+    padding: 0.25rem;
+    background-color: #ecfbfc;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    height: min-content;
+}
+
+.hamburger svg {
+    fill: #554dee;
+}
+
+.hamburger:hover,
+.hamburger:active {
+    background-color: #293241;
+    cursor: pointer;
+}
+
+header nav {
+    position: absolute;
+    top: 7.3rem;
+    width: 100vw;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.7s ease-in-out;
+    background-color: #293241;
+    border-bottom: none;
+    display: flex;
+    justify-content: center;
+}
+
+.show {
+    max-height: 40rem;
+    border-bottom: 3px solid #2c3e5b;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+    
+}
+
+nav ul li {
+    line-height: 4rem;
+    width: 100%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ecfbfc;
+    display: block;
+    text-transform: uppercase;
+}
+
+nav ul li a:active,
+nav ul li a:hover {
+    background-color: #554dee;
+}
+
+
+/****************** Typography ******************/
+
+header h1 {
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+header h1 a {
+    text-decoration: none;
+    color: #ecfbfc;
+    text-transform: uppercase;
+}
+
+header h1 a:hover,
+header h1 a:active {
+    color: #293241;
+}
+
+h2 {
+    color: #554dee;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    color: #2c3e5b;
+}
+
+p {
+    line-height: 2rem;
+}
+
+/********* Error Message *********/
+div.message {
+    background: #2c3e5b;
+    border-radius: 5px;
+    padding: 2rem;
+    color: #ecfbfc;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-bottom: 1.5rem;
+}
+
+div.message p{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/****************** Main ******************/
+/********* Home page *********/
+body.home div.description p {
+    margin-bottom: 1rem;
+}
+
+/**** Home page - Featured Items ****/
+body.home main,
+body.items main,
+body.edit main,
+body.delete main {
+    padding: 5rem 2rem;
+    display: grid;
+    gap: 5rem;
+}
+
+body.home div.featured h3,
+body.items div.collection h3,
+body.search div.search-results h3,
+body.edit div.edits h3,
+body.delete div.deletes h3 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+}
+
+body.home div.featured > div:first-of-type,
+body.items div.collection,
+body.search div.search-results,
+body.edit div.edits,
+body.delete div.deletes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+}
+
+body.home div.featured > div:first-of-type img,
+body.items div.collection img,
+body.search div.search-results img,
+body.edit div.edits img,
+body.delete div.deletes img {
+    width: 100%;
+    height: 15rem;
+    object-fit: contain;
+}
+
+/* each item card */
+body.home div.item,
+body.items div.item,
+body.search div.item,
+body.edit div.item,
+body.delete div.item {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #554dee;
+    align-content: space-between;
+}
+
+/* each item card main content */
+body.home div.item > div:first-of-type,
+body.items div.item > div:first-of-type,
+body.search div.item > div:first-of-type,
+body.edit div.item > div:first-of-type,
+body.delete div.item > div:first-of-type{
+    width: 100%;
+    padding: 1rem;
+}
+
+/* each item card main text content */
+body.home div.item > div:first-of-type > div:nth-of-type(2),
+body.items div.item > div:first-of-type > div:nth-of-type(2),
+body.search div.item > div:first-of-type > div:nth-of-type(2),
+body.edit div.item > div:first-of-type > div:nth-of-type(2),
+body.delete div.item > div:first-of-type > div:nth-of-type(2){
+    margin-top: 1rem;
+}
+
+body.home div.featured div.view-link,
+body.items div.collection div.view-link,
+body.search div.search-results div.view-link,
+body.edit div.edits div.view-link,
+body.delete div.deletes div.view-link  {
+    width: 100%;
+}
+
+body.home div.featured div.view-link a,
+body.items div.collection div.view-link a,
+body.search div.search-results div.view-link a,
+body.edit div.edits div.view-link a,
+body.delete div.deletes div.view-link a {
+    background-color: #554dee;
+    text-decoration: none;
+    text-align: center;
+    color: #ecfbfc;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    display: block;
+}
+
+body.home div.featured div.view-link a:hover,
+body.home div.featured div.view-link a:active,
+body.items div.collection div.view-link a:hover,
+body.items div.collection div.view-link a:active,
+body.search div.search-results div.view-link a:hover,
+body.search div.search-results div.view-link a:active,
+body.edit div.edits div.view-link a:hover,
+body.edit div.edits div.view-link a:active,
+body.delete div.deletes div.view-link a:hover,
+body.delete div.deletes div.view-link a:active {
+    background-color: #293241;
+    color: #ecfbfc;
+}
+
+/* size and color div */
+body.home div.item > div:first-of-type > div:nth-of-type(2) > div:nth-of-type(2),
+body.items div.item > div:first-of-type > div:nth-of-type(2) > div:nth-of-type(2),
+body.search div.item > div:first-of-type > div:nth-of-type(2) > div:nth-of-type(2),
+body.edit div.item > div:first-of-type > div:nth-of-type(2) > div:nth-of-type(2),
+body.delete div.item > div:first-of-type > div:nth-of-type(2) > div:nth-of-type(2){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* shop all link */
+div.featured > div:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+div.featured > div:nth-of-type(2) a{
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #554dee;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    color: #554dee;
+}
+div.featured > div:nth-of-type(2) a:hover,
+div.featured > div:nth-of-type(2) a:active {
+    background-color: #554dee;
+    color: #ecfbfc;
+}
+
+/**** Home page - Sidebar ****/
+body.items div.sidebar,
+body.edit div.sidebar,
+body.delete div.sidebar {
+    order: -1;
+}
+
+div.sidebar section {
+    margin-bottom: 1rem;
+}
+
+div.sidebar section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+div.sidebar section ul a {
+    text-decoration: none;
+    color: #554dee;
+}
+
+div.sidebar section ul a:hover,
+div.sidebar section ul a:active {
+    text-decoration: underline;
+}
+
+/********* Detail page *********/
+body.detail main {
+    padding: 5rem 2rem;
+}
+
+div.detail-main > div:nth-of-type(2) {
+    margin: 1rem 0;
+}
+
+div.detail-main > div:nth-of-type(2) > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/********* Search page *********/
+body.search main {
+    padding: 5rem 2rem;
+}
+
+body.search main form {
+    margin-bottom: 3rem;
+}
+
+body.search main form > * {
+    display: block;
+}
+
+body.search main form input[type=text],
+body.search main form input[type=submit] {
+    width: 100%;
+    margin-bottom: 1rem;
+    height: 4rem;
+    border-radius: 5px;
+    border: 2px solid #2c3e5b;
+}
+
+body.search main form input[type=submit] {
+    background-color: #554dee;
+    color: #ecfbfc;
+}
+
+body.search main form input[type=submit]:hover,
+body.search main form input[type=submit]:active {
+    background-color: #2c3e5b;
+    cursor: pointer;
+}
+
+
+/********* Admin page *********/
+
+body.admin main,
+body.login main {
+    padding: 5rem 2rem;
+}
+
+body.admin main ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+body.admin main ul li {
+    border-radius: 5px;
+    padding: 2rem 3rem;
+}
+
+body.admin main ul li.insert {
+    border: 5px solid green;
+}
+
+body.admin main ul li.edit {
+    border: 5px solid orange;
+}
+
+body.admin main ul li.delete {
+    border: 5px solid red;
+}
+
+body.admin main ul a {
+    border-radius: 5px;
+    text-decoration: none;
+    color: #554dee;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+body.admin main ul a:hover,
+body.admin main ul a:active {
+    background-color: #554dee;
+    color: #ecfbfc;
+}
+
+/********* Edit page *********/
+div.edit-fields {
+    display: unset;
+}
+
+div.edit-fields form > div > *,
+body.insert form > div > * ,
+body.login form > div > * {
+    display: block;
+}
+
+div.edit-fields form > div > input,
+div.edit-fields form > div > select,
+div.edit-fields form > div > textarea,
+body.insert form > div > input,
+body.insert form > div > select,
+body.insert form > div > textarea,
+body.login form > div > input {
+    width: 100%;
+    width: 100%;
+    margin-bottom: 1rem;
+    height: 4rem;
+    border-radius: 5px;
+    border: 2px solid #2c3e5b;
+}
+
+body.insert form > div > select,
+div.edit-fields form > div > select {
+    background-color: #fff;
+}
+
+div.edit-fields form > div > textarea,
+body.insert form > div > textarea {
+    height: 10rem;
+}
+
+div.edit-fields form > div > input[type=file],
+body.insert form > div > input[type=file] {
+    background-color: #fff;
+    display: flex;
+}
+
+body.edit main form input[type=submit],
+body.insert main form input[type=submit],
+body.login main form input[type=submit] {
+    background-color: #554dee;
+    color: #ecfbfc;
+    margin-top: 3rem;
+}
+
+body.edit main form input[type=submit]:hover,
+body.edit main form input[type=submit]:active,
+body.insert main form input[type=submit]:hover,
+body.insert main form input[type=submit]:active  {
+    background-color: #2c3e5b;
+    cursor: pointer;
+}
+
+body.edit img.edit-form {
+    margin: 1rem 0;
+}
+
+/********* Insert page *********/
+body.insert main {
+    padding: 5rem 2rem;
+}
+
+/********* Footer *********/
+
+footer {
+    background-color: #dbdedf;
+    margin: 10rem 0 0;
+}
+
+footer div {
+    padding: 3rem;
+}
+
+/********* Login *********/
+body.login main {
+    width: 320px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 325px) {
+    body.insert main form input[type=submit] {
+        width: 28.5rem;
+    }
+}
+
+
+@media screen and (min-width: 505px) {
+
+    body.home div.featured > div:first-of-type img,
+    body.items div.collection img,
+    body.search div.search-results img,
+    body.edit div.edits img,
+    body.delete div.deletes img {
+        height: 25rem;
+    }
+
+    div.detail-main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+    }
+
+    div.detail-main > div:first-of-type img {
+        /* height: min-content; */
+        width: 36.4rem;
+        
+    }
+
+    div.detail-main > div:nth-of-type(2) {
+        margin: 0;
+    }
+
+    /********* Search page 505px *********/
+    body.search main form input[type=text] {
+        width: 46.5rem; 
+    }
+    
+    body.search main form input[type=submit] {
+        width: 24.3rem;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    header > div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    header nav {
+        position: static;
+        max-height: 40rem;
+        overflow: visible;
+    }
+
+    nav ul {
+        padding: 1rem;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: #554dee;
+        
+    }
+
+    nav ul li {
+        line-height: 4rem;
+        width: unset;
+        margin: 0 1rem;
+    }
+
+    nav ul li a:active,
+    nav ul li a:hover {
+    color: #293241;
+    }
+
+    /********* Detail page 650px *********/
+    div.detail-main {
+        display: flex;
+    }
+
+    /********* Insert page 650px *********/
+    body.insert main {
+        width: 64.9rem;
+        margin: 0 auto;
+    }
+
+    body.delete div.sidebar {
+        order: 0;
+    }
+
+    body.delete div.sidebar section ul {
+        display: unset;
+    }
+
+    body.delete main {
+        grid-template-columns: 5fr 1fr;
+        gap: 3rem;
+    }
+
+    body.delete div.deletes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    body.home div.featured > div:first-of-type,
+    body.items div.collection,
+    body.search div.search-results,
+    body.edit div.edits {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    body.home div.featured > div:first-of-type img,
+    body.items div.collection img,
+    body.search div.search-results img,
+    body.edit div.edits img,
+    body.delete div.deletes img {
+        height: 15rem;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    body.delete div.deletes {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 900px) {
+    body.home main {
+        /* display: grid; */
+        grid-template-areas:
+        "intro intro sidebar"
+        "featured featured sidebar"
+        "featured featured sidebar"
+        "featured featured sidebar"
+        "featured featured sidebar"
+        "featured featured sidebar"
+        "featured featured sidebar"
+        "featured featured sidebar"
+        "featured featured sidebar"
+        "featured featured sidebar";
+        gap: 3rem;
+    }
+
+    body.home main > div:first-of-type {
+        grid-area: intro;
+        height: min-content;
+    } 
+
+    body.home div.featured {
+        grid-area: featured;
+    }
+
+    body.home main > div:last-of-type {
+        grid-area: sidebar;
+    }
+
+    /**** Home page - Sidebar 900x ****/
+    div.sidebar section ul {
+        display: unset;
+    }
+
+    /**** Items page 900x ****/
+    body.items div.sidebar,
+    body.edit div.sidebar {
+        order: 0;
+    }
+
+    body.items main,
+    body.detail main,
+    body.search main {
+        display: grid;
+        gap: 3rem;
+        grid-template-columns: 6fr 1fr;
+    }
+
+    /********* Detail page 900px *********/
+    div.detail-main > div:first-of-type img {
+        width: 50rem;
+        
+    }
+
+    /********* Edit page 900px *********/
+    body.edit main {
+        grid-template-columns: 2fr 5fr 1fr;
+        gap: 3rem;
+    }
+
+    body.edit div.edits {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /********* Delete page 900px *********/
+    body.delete div.deletes {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (min-width: 1355px) {
+    main,
+    footer div,
+    header > div {
+        width: 1360px;
+        margin: 0 auto;
+    }
+
+    div.jobs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    div.jobs h2,
+    div.jobs ul.pagination {
+        grid-column: 1 / span 2;
+    }
+} 
